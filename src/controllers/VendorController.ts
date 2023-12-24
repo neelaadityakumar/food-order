@@ -134,7 +134,6 @@ export const UpdateVendorService = async (req: Request,res: Response, next: Next
 export const AddFood = async (req: Request, res: Response, next: NextFunction) => {
 
     const user = req.user;
-    console.log("vendor",user)
 
     const { name, description, category, foodType, readyTime, price } = <CreateFoodInput>req.body;
      
@@ -312,7 +311,6 @@ export const AddOffer = async (req: Request, res: Response, next: NextFunction) 
                 vendor:[vendor]
             })
 
-            console.log(offer);
 
             return res.status(200).json(offer);
 
